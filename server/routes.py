@@ -30,9 +30,9 @@ def projects_handler():
         return jsonify(vars(new_project)), 201
 
 
-# @api.route('/projects/<int:project_id>', methods=['GET'])
-# def get_project_by_id(project_id):
-#     project = next((p for p in projects if p.id == project_id), None)
-#     if project is None:
-#         return jsonify({"error": "Project not found"}), 404
-#     return jsonify(vars(project))
+@api.route('/projects/<int:project_id>', methods=['GET'])
+def get_project_by_id(project_id):
+    project = next((p for p in projects if p.id == project_id), None)
+    if project is None:
+        return jsonify({"error": "Project not found"}), 404
+    return jsonify(vars(project))
