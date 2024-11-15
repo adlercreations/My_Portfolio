@@ -30,3 +30,21 @@
     color: #888;
     margin-top: 5px;
 }
+
+.navbar-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar-links a {
+    color: #333;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #007bff;
+}
