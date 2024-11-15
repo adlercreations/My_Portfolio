@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .navbar-title {
+        font-size: 1.5em;
+    }
+
+    .navbar-subtitle {
+        font-size: 0.8em;
+    }
+
+    .project-card {
+        padding: 12px;
+    }
+
+    .project-list {
+        padding: 10px;
+    }
+}

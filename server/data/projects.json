@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "title": "Portfolio Website",
+        "description": "A personal portfolio website showcasing my software projects.",
+        "tools": ["React", "Flask", "CSS"],
+        "video_link": "/path-to-portfolio-video.mp4",
+        "image_url": "/path-to-portfolio-thumbnail.jpg",
+        "expanded_description": "This portfolio website showcases my work using React for the frontend and Flask for the backend."
+    },
+    {
+        "id": 2,
+        "title": "E-commerce App",
+        "description": "A full-stack e-commerce application for online shopping.",
+        "tools": ["Node.js", "Express", "MongoDB"],
+        "video_link": "/path-to-ecommerce-video.mp4",
+        "image_url": "/path-to-ecommerce-thumbnail.jpg",
+        "expanded_description": "A scalable e-commerce platform with user authentication, product catalog, and payment integration."
+    },
+    {
+        "id": 3,
+        "title": "Weather Dashboard",
+        "description": "A web app for real-time weather updates.",
+        "tools": ["HTML", "CSS", "JavaScript", "OpenWeather API"],
+        "video_link": "/path-to-weather-video.mp4",
+        "image_url": "/path-to-weather-thumbnail.jpg",
+        "expanded_description": "This project uses the OpenWeather API to fetch and display current weather conditions and forecasts."
+    }
+]

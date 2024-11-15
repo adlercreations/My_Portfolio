@@ -1,0 +1,32 @@
+.navbar {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navbar-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.navbar-title a {
+    text-decoration: none;
+    color: inherit; /* Ensures link uses the title color */
+}
+
+.navbar-title a:hover {
+    color: #007bff; /* Changes color on hover */
+}
+
+.navbar-subtitle {
+    font-size: 1em;
+    color: #888;
+    margin-top: 5px;
+}
