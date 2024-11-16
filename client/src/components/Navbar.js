@@ -12,16 +12,32 @@ function Navbar() {
 
     return (
         <nav className="navbar">
+            {/* Dark Mode Toggle */}
+            <div className="theme-toggle-container">
+                <button className="theme-toggle" onClick={toggleTheme}>
+                    {darkMode ? 'Light Mode' : 'Dark Mode'}
+                </button>
+            </div>
+
+            {/* Main Navbar Content */}
             <div className="navbar-header">
                 <h1 className="navbar-title">
                     <Link to="/">Stephen J. Adler</Link>
                 </h1>
                 <p className="navbar-subtitle">Full-stack Software Engineer</p>
             </div>
-            <div className="navbar-actions">
-                <button className="theme-toggle" onClick={toggleTheme}>
-                    {darkMode ? 'Light Mode' : 'Dark Mode'}
-                </button>
+
+            {/* Contact Links */}
+            <div className="navbar-links">
+                <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">
+                    <i className="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:your-email@example.com">
+                    <i className="fas fa-envelope"></i>
+                </a>
             </div>
         </nav>
     );
