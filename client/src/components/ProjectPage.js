@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import '../styles/ProjectPage.css';
 
 function ProjectPage() {
     const { id } = useParams();
@@ -29,7 +30,12 @@ function ProjectPage() {
                     <li key={index}>{tool}</li>
                 ))}
             </ul>
-            <video src={project.video_link} controls width="100%" />
+            <video
+                src={project.video_link}
+                controls
+                width="100%"
+                style={{ marginBottom: '200px'}}
+            />
         </div>
     );
 }
