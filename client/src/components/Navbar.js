@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ThreeDHeader from './ThreeDHeader';
 import '../styles/Navbar.css';
 
 function Navbar() {
+
+    const [darkMode, setDarkMode] = useState(false);
+
+    const toggleTheme = () => {
+        setDarkMode(!darkMode);
+        document.body.className = darkMode ? 'light-mode' : 'dark-mode';
+    };
+
     return (
         <nav className="navbar">
+            <div className="theme-toggle-container">
+                <button className="theme-toggle" onClick={toggleTheme}>
+                    {darkMode ? 'Light Mode' : 'Dark Mode'}
+                </button>
+            </div>
             <ThreeDHeader />
             <p className="navbar-subtitle">Full-stack Software Engineer</p>
             <div className="navbar-links">
