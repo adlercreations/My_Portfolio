@@ -1,3 +1,4 @@
+//client/src/components/ThreeDHeader.js
 import React, { useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Text } from '@react-three/drei';
@@ -20,12 +21,12 @@ function AnimatedText() {
     return (
         <Text
             ref={textRef}
-            fontSize={3}
+            fontSize={2.5}
             color="#007bff"
             position={[0, 0, 0]}
             anchorX="center"
             anchorY="middle"
-            font="/fonts/Roboto-Bold.ttf" // Optional: Add a custom font
+            font={`${window.location.origin}/My_Portfolio/fonts/Roboto-Bold.ttf`} // Optional: Add a custom font
             onClick={() => navigate('/')}
             onPointerOver={(e) => (e.object.color = 'red')}
             onPointerOut={(e) => (e.object.color = '#007bff')}

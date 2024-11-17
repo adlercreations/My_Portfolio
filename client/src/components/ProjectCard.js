@@ -1,10 +1,11 @@
+//client/src/components/ProjectCard.js
 import React from 'react';
 import '../styles/ProjectCard.css';
 import { Link } from 'react-router-dom';
 
 function ProjectCard({ project }) {
     // Dynamically resolve the image URL
-    const imageUrl = require(`../assets/images/${project.image_url.split('/').pop()}`);
+    const imageUrl = `${process.env.PUBLIC_URL}${project.image_url}`;
 
     return (
         <div className="project-card">

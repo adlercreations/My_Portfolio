@@ -1,3 +1,4 @@
+//client/src/components/ProjectPage.js
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/ProjectPage.css';
@@ -7,7 +8,7 @@ function ProjectPage() {
     const [project, setProject] = useState(null);
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:5000/api/projects/${id}`)
+        fetch(`http://127.0.0.1:5000/projects/${id}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);

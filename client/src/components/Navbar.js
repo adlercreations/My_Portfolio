@@ -1,3 +1,4 @@
+//client/src/components/Navbar.js
 import React, { useState } from 'react';
 import ThreeDHeader from './ThreeDHeader';
 import '../styles/Navbar.css';

@@ -1,10 +1,11 @@
 from flask import Blueprint, jsonify, request
 import json
 from models import Project
+import os
 
 api = Blueprint('api', __name__)
 
-DATA_FILE = 'data/projects.json'
+DATA_FILE = os.path.abspath('../client/public/api/projects.json')
 
 def load_projects():
     with open(DATA_FILE) as f:
