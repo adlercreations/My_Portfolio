@@ -48,3 +48,7 @@
 .navbar-links a:hover {
     color: #007bff;
 }
+
+.theme-toggle-container {
+    margin-top: 20px;
+}
