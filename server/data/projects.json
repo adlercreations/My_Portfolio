@@ -1,29 +1,47 @@
 [
     {
         "id": 1,
-        "title": "Portfolio Website",
-        "description": "A personal portfolio website showcasing my software projects.",
-        "tools": ["React", "Flask", "CSS"],
+        "title": "DrawFire",
+        "description": "An AI tool for artists to improve their work, built with React, Flask, OpenAI, and OpenCV.",
+        "tools": ["React", "Flask", "OpenAI", "OpenCV", "Cloudinary"],
         "video_link": "/path-to-portfolio-video.mp4",
-        "image_url": "/path-to-portfolio-thumbnail.jpg",
-        "expanded_description": "This portfolio website showcases my work using React for the frontend and Flask for the backend."
+        "image_url": "/assets/images/drawfire-thumbnail.jpg",
+        "expanded_description": "An interactive AI tool for artists and illustrators to improve their work. The app processes images and provides suggestions for enhancement, empowering users to refine their creations. Built using React, Flask, OpenAI, Cloudinary, and OpenCV."
     },
     {
         "id": 2,
-        "title": "E-commerce App",
-        "description": "A full-stack e-commerce application for online shopping.",
-        "tools": ["Node.js", "Express", "MongoDB"],
+        "title": "WorldBuild",
+        "description": "A platform for creators to showcase portfolios and collaborate, built with Vite/React and Flask.",
+        "tools": ["React", "Vite", "Flask", "SQLAlchemy", "Cloudinary"],
         "video_link": "/path-to-ecommerce-video.mp4",
-        "image_url": "/path-to-ecommerce-thumbnail.jpg",
-        "expanded_description": "A scalable e-commerce platform with user authentication, product catalog, and payment integration."
+        "image_url": "/assets/images/worldbuild-thumbnail.jpg",
+        "expanded_description": "A social collaboration platform for creators and character design artists. The app enables users to showcase portfolios, create project ideas, and collaborate with others to bring creative visions to life. Built using Vite/React, Flask, and SQLAlchemy."
     },
     {
         "id": 3,
-        "title": "Weather Dashboard",
-        "description": "A web app for real-time weather updates.",
-        "tools": ["HTML", "CSS", "JavaScript", "OpenWeather API"],
+        "title": "Surviving_NYC",
+        "description": "A text-based NYC adventure game with SQLite-backed stat tracking.",
+        "tools": ["Python", "SQLite"],
         "video_link": "/path-to-weather-video.mp4",
-        "image_url": "/path-to-weather-thumbnail.jpg",
-        "expanded_description": "This project uses the OpenWeather API to fetch and display current weather conditions and forecasts."
+        "image_url": "/assets/images/surviving-nyc-thumbnail.jpg",
+        "expanded_description": "A humorous, choose-your-own-adventure game played through the command line. Players navigate absurd scenarios to try to survive a day in NYC. Built using Python, Flask, and SQLite."
+    },
+    {
+        "id": 4,
+        "title": "ComicSpot",
+        "description": "A React-based single-page application designed for comic book enthusiasts.",
+        "tools": ["React", "Javascript", "JSON"],
+        "video_link": "/path-to-portfolio-video.mp4",
+        "image_url": "/assets/images/comicspot-thumbnail.jpg",
+        "expanded_description": "An interactive AI tool for artists and illustrators to improve their work. The app processes images and provides suggestions for enhancement, empowering users to refine their creations. Built using React, Flask, OpenAI, Cloudinary, and OpenCV."
+    },
+    {
+        "id": 5,
+        "title": "Superhero Battler",
+        "description": "Pick your favorite superhero's to match against each other, see who wins!",
+        "tools": ["Javascript", "External API"],
+        "video_link": "/path-to-portfolio-video.mp4",
+        "image_url": "/assets/images/superhero-battler-thumbnail.jpg",
+        "expanded_description": "Get ready to rumble with the Superhero Battler! Pick your favorite superhero's to match against each other, see who wins! Pick Goku, Wolverine, Deadpool, Superman, Hulk, Thor, and many more!"
     }
 ]
