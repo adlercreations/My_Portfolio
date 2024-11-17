@@ -1,28 +1,23 @@
 {
   "files": {
     "main.css": "/My_Portfolio/static/css/main.c2e3b570.css",
-    "main.js": "/My_Portfolio/static/js/main.f0e0b77a.js",
+    "main.js": "/My_Portfolio/static/js/main.629a29a5.js",
     "static/js/453.419a5d54.chunk.js": "/My_Portfolio/static/js/453.419a5d54.chunk.js",
     "static/media/fa-solid-900.ttf": "/My_Portfolio/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/fa-brands-400.ttf": "/My_Portfolio/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
     "static/media/fa-solid-900.woff2": "/My_Portfolio/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
-    "static/media/superhero-battler-thumbnail.jpg": "/My_Portfolio/static/media/superhero-battler-thumbnail.0e64c0045d054e588dba.jpg",
     "static/media/fa-brands-400.woff2": "/My_Portfolio/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
-    "static/media/worldbuild-thumbnail.jpg": "/My_Portfolio/static/media/worldbuild-thumbnail.f97f3ce4ccc64c6119d2.jpg",
-    "static/media/drawfire-thumbnail.jpg": "/My_Portfolio/static/media/drawfire-thumbnail.9ba97ebc458ecbdf5035.jpg",
-    "static/media/comicspot-thumbnail.jpg": "/My_Portfolio/static/media/comicspot-thumbnail.a59fb237a037bd873322.jpg",
     "static/media/fa-regular-400.ttf": "/My_Portfolio/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
-    "static/media/surviving-nyc-thumbnail.jpg": "/My_Portfolio/static/media/surviving-nyc-thumbnail.e1bf324761c1e35ac653.jpg",
     "static/media/fa-regular-400.woff2": "/My_Portfolio/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
     "static/media/fa-v4compatibility.ttf": "/My_Portfolio/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/My_Portfolio/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/My_Portfolio/index.html",
     "main.c2e3b570.css.map": "/My_Portfolio/static/css/main.c2e3b570.css.map",
-    "main.f0e0b77a.js.map": "/My_Portfolio/static/js/main.f0e0b77a.js.map",
+    "main.629a29a5.js.map": "/My_Portfolio/static/js/main.629a29a5.js.map",
     "453.419a5d54.chunk.js.map": "/My_Portfolio/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c2e3b570.css",
-    "static/js/main.f0e0b77a.js"
+    "static/js/main.629a29a5.js"
   ]
 }
