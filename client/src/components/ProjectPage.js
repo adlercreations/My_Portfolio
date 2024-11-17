@@ -8,15 +8,25 @@ function ProjectPage() {
     const [project, setProject] = useState(null);
 
     useEffect(() => {
-        fetch(`http://127.0.0.1:5000/projects/${id}`)
-            .then(response => {
+        const baseUrl = process.env.NODE_ENV === 'production'
+            ? `${process.env.PUBLIC_URL}/api/projects.json` // Deployed URL
+            : 'http://127.0.0.1:5000/projects'; // Development URL
+
+        fetch(baseUrl)
+            .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
                 return response.json();
             })
-            .then(data => setProject(data))
-            .catch(error => console.error("Project not found:", error));
+            .then((data) => {
+                const foundProject = data.find((p) => p.id === parseInt(id));
+                if (!foundProject) {
+                    throw new Error("Project not found");
+                }
+                setProject(foundProject);
+            })
+            .catch((error) => console.error("Error fetching project:", error));
     }, [id]);
 
     if (!project) return <div>Loading...</div>;

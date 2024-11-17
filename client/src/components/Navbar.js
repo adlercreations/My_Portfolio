@@ -14,6 +14,11 @@ function Navbar() {
 
     return (
         <nav className="navbar">
+            <div className="theme-toggle-container">
+                <button className="theme-toggle" onClick={toggleTheme}>
+                    {darkMode ? 'Light Mode' : 'Dark Mode'}
+                </button>
+            </div>
             <ThreeDHeader />
             <p className="navbar-subtitle">Full-stack Software Engineer</p>
             <div className="navbar-links">
@@ -26,11 +31,6 @@ function Navbar() {
                 <a href="mailto:your-email@example.com">
                     <i className="fas fa-envelope"></i>
                 </a>
-            </div>
-            <div className="theme-toggle-container">
-                <button className="theme-toggle" onClick={toggleTheme}>
-                    {darkMode ? 'Light Mode' : 'Dark Mode'}
-                </button>
             </div>
         </nav>
     );

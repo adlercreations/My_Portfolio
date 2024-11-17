@@ -7,20 +7,24 @@ function ProjectList() {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:5000/projects') // Full URL to backend
-            .then(response => {
+        const baseUrl = process.env.NODE_ENV === 'production' 
+            ? `${process.env.PUBLIC_URL}/api/projects.json` // Deployed URL
+            : 'http://127.0.0.1:5000/projects'; // Development URL
+
+        fetch(baseUrl)
+            .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
                 return response.json();
             })
-            .then(data => setProjects(data))
-            .catch(error => console.error("Error fetching projects:", error));
+            .then((data) => setProjects(data))
+            .catch((error) => console.error("Error fetching projects:", error));
     }, []);
 
     return (
         <div className="project-list">
-            {projects.map(project => (
+            {projects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
             ))}
         </div>
@@ -28,3 +32,35 @@ function ProjectList() {
 }
 
 export default ProjectList;
+
+
+
+// import React, { useEffect, useState } from 'react';
+// import '../styles/ProjectList.css';
+// import ProjectCard from './ProjectCard';
+
+// function ProjectList() {
+//     const [projects, setProjects] = useState([]);
+
+//     useEffect(() => {
+//         fetch('http://127.0.0.1:5000/projects') // Full URL to backend
+//             .then(response => {
+//                 if (!response.ok) {
+//                     throw new Error(`HTTP error! Status: ${response.status}`);
+//                 }
+//                 return response.json();
+//             })
+//             .then(data => setProjects(data))
+//             .catch(error => console.error("Error fetching projects:", error));
+//     }, []);
+
+//     return (
+//         <div className="project-list">
+//             {projects.map(project => (
+//                 <ProjectCard key={project.id} project={project} />
+//             ))}
+//         </div>
+//     );
+// }
+
+// export default ProjectList;
