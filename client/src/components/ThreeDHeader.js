@@ -30,6 +30,9 @@ function AnimatedText() {
             onClick={() => navigate('/')}
             onPointerOver={(e) => (e.object.color = 'red')}
             onPointerOut={(e) => (e.object.color = '#007bff')}
+            outlineWidth={0.12}
+            outlineColor="white"
+            outlineOpacity={1}
             style={{ cursor: 'pointer' }}
         >
             Stephen J. Adler
@@ -37,9 +40,28 @@ function AnimatedText() {
     );
 }
 
+// function ThreeDHeader() {
+//     return (
+//         <div style={{ width: '100%', height: '150px', position: 'relative' }}>
+//             <Canvas>
+//                 <ambientLight intensity={0.5} />
+//                 <directionalLight position={[10, 10, 5]} />
+//                 <AnimatedText />
+//             </Canvas>
+//         </div>
+//     );
+// }
+
 function ThreeDHeader() {
     return (
-        <div style={{ width: '100%', height: '150px', position: 'relative' }}>
+        <div
+            style={{
+                width: '100vw', // Full width of the viewport
+                height: '150px', // Height of the header
+                position: 'relative', // Ensure it's positioned correctly
+                overflow: 'hidden', // Prevent any overflowing content
+            }}
+        >
             <Canvas>
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[10, 10, 5]} />

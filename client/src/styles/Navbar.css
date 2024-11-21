@@ -93,13 +93,13 @@
 }
 
 .about-toggle {
-    background: none;
+    background: #007bff;
     border: 1px solid #333;
     border-radius: 4px;
     padding: 5px 10px;
     cursor: pointer;
     font-size: 0.9em;
-    color: #007bff;
+    color: #f8f8f8;
     transition: background 0.3s ease, color 0.3s ease;
 }
 

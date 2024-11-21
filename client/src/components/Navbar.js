@@ -47,16 +47,26 @@ function Navbar() {
                     </button>
                     <p>
                         Hello! I'm Stephen J. Adler, a Full-stack Software Engineer with a passion for
-                        building dynamic and intuitive web applications. I have experience in React, Flask,
-                        Python, JavaScript, and more.
+                        building dynamic and intuitive web applications. I am proficient in design, 
+                        collaborating, problem-solving, and outside-the-box thinking.
                     </p>
-                    <h3>Technical Skills:</h3>
+                    <h3>Developer Skills:</h3>
                     <ul>
-                        <li>Languages: JavaScript, Python, HTML, CSS</li>
+                        <li>Languages: JavaScript, Python</li>
                         <li>Frameworks: React, Flask</li>
-                        <li>Tools: Git, Docker, Webpack</li>
-                        <li>Libraries: Redux, Three.js, Axios</li>
-                        <li>Software: Visual Studio Code, Postman</li>
+                        <li>Tools: Git, Docker, Vite</li>
+                        <li>Libraries: Redux, Tensorflow, Pytorch, Vue.js, Django</li>
+                        <li>Software: Visual Studio Code, Postman, Replit</li>
+                    </ul>
+                    <h3>Design Skills:</h3>
+                    <ul>
+                        <li>Languages: HTML, CSS</li>
+                        <li>Frameworks: Tailwind, Material UI</li>
+                        <li>Tools: Digital Art tools, Drawing tablets</li>
+                        <li>Libraries: Three.js, React-three-fiber</li>
+                        <li>Software: Adobe Creative Suite, Procreate, Canva, Affinity Suite, Figma, 
+                            Blender, Autodesk Maya, ZBrush, and much more.
+                        </li>
                     </ul>
                 </div>
             )}
