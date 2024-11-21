@@ -1,7 +1,10 @@
 .navbar {
-    position: relative; /* Change this to relative */
+    position: relative;
     width: 100%;
-    background-color: white; /* Optional: Use a background for visibility */
+    background: none;
+    /* background: url('../assets/images/cityscape.PNG'); */
+    background-size: cover;
+    /* background-color: white; */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
     padding: 10px 20px;
     z-index: 10;
@@ -10,6 +13,20 @@
     align-items: center;
     gap: 10px;
     overflow-x: hidden;
+    color: white;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/images/cityscape.PNG') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
 }
 
 /* .navbar {
@@ -41,8 +58,8 @@
 }
 
 .navbar-subtitle {
-    font-size: 1em;
-    color: #888;
+    font-size: 1.5em;
+    color: #2f2f2f;
     margin-top: -20px;
 }
 
@@ -67,4 +84,82 @@
 .theme-toggle-container {
     position: center;
     top: 10px;
+}
+
+/* about section */
+.about-toggle-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.about-toggle {
+    background: none;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    color: #007bff;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.about-toggle:hover {
+    background: #333;
+    color: #fff;
+}
+
+.about-panel {
+    position: fixed;
+    top: 100px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    overflow-y: auto;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out
+}
+
+.about-panel h3 {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.about-panel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-panel li {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Add styles for the Close About button inside the about-panel */
+.about-panel .close-about {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.about-panel .close-about:hover {
+    background: #333;
+    color: #fff;
+}
+
+.about-panel p {
+    margin-top: 30px;
 }

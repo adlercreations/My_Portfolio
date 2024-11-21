@@ -1,15 +1,18 @@
-//client/src/components/Navbar.js
 import React, { useState } from 'react';
 import ThreeDHeader from './ThreeDHeader';
 import '../styles/Navbar.css';
 
 function Navbar() {
-
     const [darkMode, setDarkMode] = useState(false);
+    const [isAboutOpen, setIsAboutOpen] = useState(false);
 
     const toggleTheme = () => {
         setDarkMode(!darkMode);
         document.body.className = darkMode ? 'light-mode' : 'dark-mode';
+    };
+
+    const toggleAbout = () => {
+        setIsAboutOpen(!isAboutOpen);
     };
 
     return (
@@ -32,11 +35,107 @@ function Navbar() {
                     <i className="fas fa-envelope"></i>
                 </a>
             </div>
+            <div className="about-toggle-container">
+                <button className="about-toggle" onClick={toggleAbout}>
+                    About
+                </button>
+            </div>
+            {isAboutOpen && (
+                <div className="about-panel">
+                    <button className='close-about' onClick={toggleAbout}>
+                        Close
+                    </button>
+                    <p>
+                        Hello! I'm Stephen J. Adler, a Full-stack Software Engineer with a passion for
+                        building dynamic and intuitive web applications. I have experience in React, Flask,
+                        Python, JavaScript, and more.
+                    </p>
+                    <h3>Technical Skills:</h3>
+                    <ul>
+                        <li>Languages: JavaScript, Python, HTML, CSS</li>
+                        <li>Frameworks: React, Flask</li>
+                        <li>Tools: Git, Docker, Webpack</li>
+                        <li>Libraries: Redux, Three.js, Axios</li>
+                        <li>Software: Visual Studio Code, Postman</li>
+                    </ul>
+                </div>
+            )}
         </nav>
     );
 }
 
 export default Navbar;
+
+
+
+// //client/src/components/Navbar.js
+// import React, { useState } from 'react';
+// import ThreeDHeader from './ThreeDHeader';
+// import '../styles/Navbar.css';
+
+// function Navbar() {
+
+//     const [darkMode, setDarkMode] = useState(false);
+//     const [aboutVisable, setAboutVisable] = useState(false);
+
+//     const toggleTheme = () => {
+//         setDarkMode(!darkMode);
+//         document.body.className = darkMode ? 'light-mode' : 'dark-mode';
+//     };
+
+//     const toggleAbout = () => {
+//         setAboutVisable(!aboutVisable);
+
+//     return (
+//         <>
+//             <nav className="navbar">
+//                 <div className="theme-toggle-container">
+//                     <button className="theme-toggle" onClick={toggleTheme}>
+//                         {darkMode ? 'Light Mode' : 'Dark Mode'}
+//                     </button>
+//                 </div>
+//                 <ThreeDHeader />
+//                 <p className="navbar-subtitle">Full-stack Software Engineer</p>
+//                 <div className="navbar-links">
+//                     <a href="https://github.com/adlercreations" target="_blank" rel="noopener noreferrer">
+//                         <i className="fab fa-github"></i>
+//                     </a>
+//                     <a href="https://www.linkedin.com/in/stephenadlerartist/" target="_blank" rel="noopener noreferrer">
+//                         <i className="fab fa-linkedin"></i>
+//                     </a>
+//                     <a href="mailto:adlercreations@gmail.com">
+//                         <i className="fas fa-envelope"></i>
+//                     </a>
+//                 </div>
+//                 <div className='about-toggle-container'>
+//                     <button className="about-toggle" onClick={toggleAbout}>
+//                         {aboutVisable ? 'Hide About' : 'Show About'}
+//                     </button>
+//                 </div>
+//             </nav>
+
+//             {aboutVisable && (
+//                 <div className="about-panel">
+//                     <p>
+//                         Hello! I'm Stephen Adler, a Full-stack Software Developer with a passion for 
+//                         building dynamic and  intuitive web applications. I have experience in React, Flask,
+//                         Python, Javascript, and more.
+//                     </p>
+//                     <h3>Technical Skills</h3>
+//                     <ul>
+//                         <li>Languages: Javascript, Python, HTML, CSS</li>
+//                         <li>Frameworks: React, Flask</li>
+//                         <li>Tools: Git, Docker, Webpack</li>
+//                         <li>Libraries: Redux, Three.js, Axios</li>
+//                         <li>Software: VS ComputedAttribute, Postman</li>
+//                     </ul>
+//                 </div>
+//             )}
+//         </>
+//     );
+// }
+
+// export default Navbar;
 
 
 
