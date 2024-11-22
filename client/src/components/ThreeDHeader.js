@@ -5,7 +5,7 @@ import { Text } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useNavigate } from 'react-router-dom';
 
-function AnimatedText() {
+function AnimatedText({ darkMode }) {
     const textRef = useRef();
     const navigate = useNavigate();
 
@@ -30,8 +30,8 @@ function AnimatedText() {
             onClick={() => navigate('/')}
             onPointerOver={(e) => (e.object.color = 'red')}
             onPointerOut={(e) => (e.object.color = '#007bff')}
-            outlineWidth={0.12}
-            outlineColor="white"
+            outlineWidth={0.08}
+            outlineColor={darkMode ? 'white' : 'black'}
             outlineOpacity={1}
             style={{ cursor: 'pointer' }}
         >
@@ -52,7 +52,7 @@ function AnimatedText() {
 //     );
 // }
 
-function ThreeDHeader() {
+function ThreeDHeader({ darkMode }) {
     return (
         <div
             style={{
@@ -65,7 +65,7 @@ function ThreeDHeader() {
             <Canvas>
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[10, 10, 5]} />
-                <AnimatedText />
+                <AnimatedText darkMode={darkMode} />
             </Canvas>
         </div>
     );

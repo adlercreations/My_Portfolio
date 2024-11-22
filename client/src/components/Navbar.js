@@ -1,3 +1,4 @@
+// /client/src/components/Navbar.js
 import React, { useState } from 'react';
 import ThreeDHeader from './ThreeDHeader';
 import '../styles/Navbar.css';
@@ -18,20 +19,56 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="theme-toggle-container">
-                <button className="theme-toggle" onClick={toggleTheme}>
+                <button 
+                    className="theme-toggle"
+                    onClick={toggleTheme}
+                    style={{ 
+                        color: "white",
+                        // color: darkMode ? 'black' : 'white',
+                    }}
+                >
                     {darkMode ? 'Light Mode' : 'Dark Mode'}
                 </button>
             </div>
-            <ThreeDHeader />
-            <p className="navbar-subtitle">Full-stack Software Engineer</p>
+            <ThreeDHeader darkMode={darkMode} />
+            <p 
+                className="navbar-subtitle"
+                style={{
+                    color: darkMode ? 'white' : 'black',
+                }}
+            >
+                Full-stack Software Engineer
+            </p>
             <div className="navbar-links">
-                <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
+                <a 
+                    href="https://github.com/your-github-username"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                        color: darkMode ? 'white' : 'black',
+                        transition: 'color 0.3s ease',
+                    }}
+                >
                     <i className="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">
+                <a 
+                    href="https://linkedin.com/in/your-linkedin-profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                        color: darkMode ? 'white' : 'black',
+                        transition: 'color 0.3s ease',
+                    }}
+                >
                     <i className="fab fa-linkedin"></i>
                 </a>
-                <a href="mailto:your-email@example.com">
+                <a 
+                    href="mailto:your-email@example.com"
+                    style={{ 
+                        color: darkMode ? 'white' : 'black',
+                        transition: 'color 0.3s ease',
+                    }}
+                >
                     <i className="fas fa-envelope"></i>
                 </a>
             </div>

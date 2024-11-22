@@ -84,6 +84,10 @@
 .theme-toggle-container {
     position: center;
     top: 10px;
+    background: #333;
+    color: #fff;
+    border: 1px solid #ffffff;
+    
 }
 
 /* about section */
