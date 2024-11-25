@@ -87,7 +87,7 @@
     background: #333;
     color: #fff;
     border: 1px solid #ffffff;
-    
+
 }
 
 /* about section */
@@ -115,8 +115,10 @@
 .about-panel {
     position: fixed;
     top: 100px; /* Adjust based on navbar height */
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
     max-height: calc(100vh - 100px);
     padding: 20px;
     background-color: #fff;
@@ -124,7 +126,8 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 100;
     overflow-y: auto;
-    transform: translateY(0);
+    text-align: center;
+    border-radius: 10px;
     transition: transform 0.3s ease-in-out
 }
 
@@ -136,7 +139,9 @@
 .about-panel ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 10px 0;
+    text-align: left; /* Align list items to the left */
+    margin-left: 10px;
 }
 
 .about-panel li {
@@ -157,13 +162,42 @@
     cursor: pointer;
     font-size: 0.9em;
     transition: background 0.3s ease, color 0.3s ease;
-}
-
-.about-panel .close-about:hover {
     background: #333;
     color: #fff;
 }
 
+.about-panel .close-about:hover {
+    background: #007bff;
+    color: #fff;
+}
+
 .about-panel p {
-    margin-top: 30px;
+    margin-top: 5px;
+}
+
+/* profile section */
+.profile-container {
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 120px; /* Adjust the size of the picture */
+    height: 120px; /* Match width for a circle */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    border: 3px solid #007bff; /* Add a border for emphasis */
+    margin: 40px auto 10px auto; /* Center the picture and add margin */
+}
+
+.profile-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: -5px 0;
+    color: #007bff; /* Add a pop of color */
+}
+
+.profile-title {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
 }

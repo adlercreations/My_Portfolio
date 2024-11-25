@@ -82,6 +82,15 @@ function Navbar() {
                     <button className='close-about' onClick={toggleAbout}>
                         Close
                     </button>
+                    <div className="profile-container">
+                        <img 
+                            src={`${process.env.PUBLIC_URL}/assets/images/profile-pic.jpg`} 
+                                alt="Profile" 
+                                className="profile-picture" 
+                        />
+                        <p className="profile-name">Stephen J. Adler</p>
+                        <p className="profile-title">Full-stack Software Engineer</p>
+                    </div>
                     <p>
                         Hello! I'm Stephen J. Adler, a Full-stack Software Engineer with a passion for
                         building dynamic and intuitive web applications. I am proficient in design, 
