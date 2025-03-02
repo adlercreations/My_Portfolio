@@ -37,7 +37,7 @@ function Navbar() {
                     color: darkMode ? 'white' : 'black',
                 }}
             >
-                Full-stack Software Engineer
+                Full-Stack Software Engineer
             </p>
             <div className="navbar-links">
                 <a 
