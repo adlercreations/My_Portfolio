@@ -41,7 +41,7 @@ function Navbar() {
             </p>
             <div className="navbar-links">
                 <a 
-                    href="https://github.com/your-github-username"
+                    href="https://github.com/adlercreations"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -52,7 +52,7 @@ function Navbar() {
                     <i className="fab fa-github"></i>
                 </a>
                 <a 
-                    href="https://linkedin.com/in/your-linkedin-profile"
+                    href="https://www.linkedin.com/in/stephenadlercreations/"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -63,7 +63,7 @@ function Navbar() {
                     <i className="fab fa-linkedin"></i>
                 </a>
                 <a 
-                    href="mailto:your-email@example.com"
+                    href="mailto:adlercreations@gmail.com"
                     style={{ 
                         color: darkMode ? 'white' : 'black',
                         transition: 'color 0.3s ease',
