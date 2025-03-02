@@ -25,6 +25,7 @@ function ProjectPage() {
                     throw new Error("Project not found");
                 }
                 setProject(foundProject);
+                console.log("Video Link:", foundProject.video_link);
             })
             .catch((error) => console.error("Error fetching project:", error));
     }, [id]);
@@ -42,7 +43,7 @@ function ProjectPage() {
                 ))}
             </ul>
             <video
-                src={project.video_link}
+                src={`${process.env.PUBLIC_URL}${project.video_link}`}
                 controls
                 width="100%"
                 style={{ marginBottom: '200px'}}

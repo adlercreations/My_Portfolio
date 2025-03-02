@@ -5,11 +5,14 @@ import os
 
 api = Blueprint('api', __name__)
 
+# Verify the absolute path is what you expect
 DATA_FILE = os.path.abspath('../client/public/api/projects.json')
+print("Using DATA_FILE:", DATA_FILE)
 
 def load_projects():
     with open(DATA_FILE) as f:
         project_data = json.load(f)
+        print("Loaded project data:", project_data)  # Debug print
         return [Project.from_dict(p) for p in project_data]
     
 def save_projects(projects):
@@ -37,3 +40,10 @@ def get_project_by_id(project_id):
     if project is None:
         return jsonify({"error": "Project not found"}), 404
     return jsonify(vars(project))
+
+@api.route('/projects')
+def get_projects():
+    projects = load_projects()
+    # Debug print the projects that are returned
+    print("Loaded projects (Flask):", [p.__dict__ for p in projects])
+    return jsonify([p.__dict__ for p in projects])
