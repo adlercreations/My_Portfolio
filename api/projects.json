@@ -4,7 +4,7 @@
         "title": "Sanctuary Space",
         "description": "A wellness and spiritual space for comforting home goods and products, built with Vite/React, Flask, ReactNative, and Stripe.",
         "tools": ["React", "Flask", "Stripe", "ReactNative", "Cloudinary"],
-        "video_link": "/assets/videos/DrawFire.mp4",
+        "video_link": "/assets/videos/Sanctuary_Space_Vid_1.mp4",
         "image_url": "/assets/images/Sanctuary_Space_Logo_v1.png",
         "expanded_description": "A wellness and spiritual brand inspired by South Asian culture. A sanctuary space for comforting home goods and products, as well as community and events. Sanctuary Space is built with Vite/React, Flask, ReactNative, and Stripe."
     },
