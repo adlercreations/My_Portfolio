@@ -98,20 +98,19 @@ function Navbar() {
                     </p>
                     <h3>Developer Skills:</h3>
                     <ul>
-                        <li>Languages: JavaScript, Python</li>
-                        <li>Frameworks: React, Flask</li>
-                        <li>Tools: Git, Docker, Vite</li>
+                        <li>Languages: JavaScript, Python, Swift</li>
+                        <li>Frameworks: React, Flask, React Native</li>
+                        <li>Tools: Git, Docker, Vite, AWS</li>
                         <li>Libraries: Redux, Tensorflow, Pytorch, Vue.js, Django</li>
-                        <li>Software: Visual Studio Code, Postman, Replit</li>
+                        <li>Software: Visual Studio Code, Postman, Replit, Unity, Xcode</li>
                     </ul>
                     <h3>Design Skills:</h3>
                     <ul>
                         <li>Languages: HTML, CSS</li>
-                        <li>Frameworks: Tailwind, Material UI</li>
+                        <li>Frameworks: Tailwind, Material UI, Bootstrap</li>
                         <li>Tools: Digital Art tools, Drawing tablets</li>
                         <li>Libraries: Three.js, React-three-fiber</li>
-                        <li>Software: Adobe Creative Suite, Procreate, Canva, Affinity Suite, Figma, 
-                            Blender, Autodesk Maya, ZBrush, and much more.
+                        <li>Software: Adobe Creative Suite, Procreate, Canva, Affinity Suite, Figma, Blender, Autodesk Maya, ZBrush, and much more.
                         </li>
                     </ul>
                 </div>
