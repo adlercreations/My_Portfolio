@@ -1,11 +1,12 @@
 //client/src/components/ThreeDHeader.js
 import React, { useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Text } from '@react-three/drei';
+import { Text3D } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useNavigate } from 'react-router-dom';
+import { OrbitControls } from '@react-three/drei';
 
-function AnimatedText({ darkMode }) {
+function AnimatedText() {
     const textRef = useRef();
     const navigate = useNavigate();
 
@@ -18,54 +19,49 @@ function AnimatedText({ darkMode }) {
         }
     });
 
+    const primaryColor = '#3b82f6'; // Theme primary color
+    const hoverColor = '#2563eb'; // A darker shade for hover
+
     return (
-        <Text
+        <Text3D
             ref={textRef}
-            fontSize={2.5}
-            color="#007bff"
-            position={[0, 0, 0]}
-            anchorX="center"
-            anchorY="middle"
-            font={`${window.location.origin}/My_Portfolio/fonts/Roboto-Bold.ttf`} // Optional: Add a custom font
+            font="/fonts/Inter_Bold.json"
+            size={0.8}
+            height={0.2}
+            curveSegments={12}
+            bevelEnabled
+            bevelThickness={0.05}
+            bevelSize={0.02}
+            bevelOffset={0}
+            bevelSegments={5}
+            letterSpacing={0.02}
+            lineHeight={1}
             onClick={() => navigate('/')}
-            onPointerOver={(e) => (e.object.color = 'red')}
-            onPointerOut={(e) => (e.object.color = '#007bff')}
-            outlineWidth={0.08}
-            outlineColor={darkMode ? 'white' : 'black'}
-            outlineOpacity={1}
-            style={{ cursor: 'pointer' }}
+            onPointerOver={(e) => e.object.material.color.set(hoverColor)}
+            onPointerOut={(e) => e.object.material.color.set(primaryColor)}
         >
-            Stephen J. Adler
-        </Text>
+            STEPHEN ADLER
+            <meshStandardMaterial
+                color={primaryColor}
+                emissive={primaryColor}
+                emissiveIntensity={0.2}
+                metalness={0.8}
+                roughness={0.2}
+            />
+        </Text3D>
     );
 }
 
-// function ThreeDHeader() {
-//     return (
-//         <div style={{ width: '100%', height: '150px', position: 'relative' }}>
-//             <Canvas>
-//                 <ambientLight intensity={0.5} />
-//                 <directionalLight position={[10, 10, 5]} />
-//                 <AnimatedText />
-//             </Canvas>
-//         </div>
-//     );
-// }
-
-function ThreeDHeader({ darkMode }) {
+function ThreeDHeader() {
     return (
-        <div
-            style={{
-                width: '100vw', // Full width of the viewport
-                height: '150px', // Height of the header
-                position: 'relative', // Ensure it's positioned correctly
-                overflow: 'hidden', // Prevent any overflowing content
-            }}
-        >
-            <Canvas>
+        <div className="w-full h-40 relative overflow-hidden cursor-pointer">
+            <Canvas dpr={[1, 2]}>
                 <ambientLight intensity={0.5} />
-                <directionalLight position={[10, 10, 5]} />
-                <AnimatedText darkMode={darkMode} />
+                <pointLight position={[10, 10, 10]} intensity={1} />
+                <Suspense fallback={null}>
+                    <AnimatedText />
+                </Suspense>
+                <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
             </Canvas>
         </div>
     );
