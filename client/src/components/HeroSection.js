@@ -12,7 +12,7 @@ function HeroSection() {
         <h1 className="text-5xl md:text-7xl font-thin text-black mb-4">
           Stephen J. Adler
         </h1>
-        <p className="text-xl md:text-2xl font-thin text-gray-800">
+        <p className="text-2xl md:text-2xl font-thin text-gray-800">
           Software Engineer & Digital Artist
         </p>
       </div>
